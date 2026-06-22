@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="todo-card">
+      <div class="header">
+        <div>
+          <p class="eyebrow">Todo List</p>
+          <h1>今天要完成的任務</h1>
+        </div>
+        <div class="stats" id="statsText">載入中...</div>
+      </div>
+
+      <form class="todo-form" id="todoForm">
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="新增一個任務，例如：閱讀 30 分鐘"
+          autocomplete="off"
+        />
+        <button type="submit">新增</button>
+      </form>
+
+      <div class="filter-group" id="filterGroup">
+        <button type="button" data-filter="all" class="active">全部</button>
+        <button type="button" data-filter="active">未完成</button>
+        <button type="button" data-filter="completed">已完成</button>
+      </div>
+
+      <ul class="todo-list" id="todoList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
